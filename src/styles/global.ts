@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -32,4 +32,11 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-`;
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+    color: ${(props) => props.theme['gray-100']};
+  }
+
+`
