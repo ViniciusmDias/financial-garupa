@@ -23,12 +23,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   button {
-    font: 400 1rem Inter, sans-serif;
+    font: 400 0.875rem Inter, sans-serif;
     cursor: pointer;
     transition: all 0.4 ease;
     
     :hover {
-      opacity: 0.5;
+      opacity: 0.8;
     }
   }
 
@@ -37,6 +37,14 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     line-height: 1.875rem;
     color: ${(props) => props.theme['gray-100']};
+  }
+
+  h5 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: ${(props) => props.theme['gray-100']};
+    margin-bottom: 0.25rem;
   }
 
 `
