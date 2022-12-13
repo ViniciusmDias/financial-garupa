@@ -39,6 +39,12 @@ export const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme['gray-100']};
   }
 
+  h3 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+
   h5 {
     font-size: 0.875rem;
     font-weight: 400;
