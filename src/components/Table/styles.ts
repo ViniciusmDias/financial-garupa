@@ -7,11 +7,6 @@ export const Container = styled.table`
   padding: 1rem 1.25rem;
   background-color: var(--blue);
   border-bottom: 0.5rem solid ${(props) => props.theme['gray-100']};
-
-  h3 {
-    text-align: center;
-    margin-bottom: 0.75rem;
-  }
 `
 
 export const ListHeader = styled.thead`
@@ -76,6 +71,10 @@ export const ListFooter = styled.tfoot`
 
   ${Row} {
     border-bottom: none;
+  }
+
+  td {
+    font-weight: 700;
   }
 
   td:last-child {

@@ -8,6 +8,7 @@ export function Home() {
     <S.Container>
       <Header />
       <Form />
+      <h3>Extrato de transações</h3>
       <Table />
     </S.Container>
   )

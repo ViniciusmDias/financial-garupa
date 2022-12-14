@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { InputHTMLAttributes } from 'react'
 
 import * as S from './styles'
 
-interface InputProps {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   text: string
   htmlFor: string
 }

@@ -1,6 +1,7 @@
+import { SelectHTMLAttributes } from 'react'
 import * as S from './styles'
 
-interface SelectProps {
+interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   text: string
   htmlFor: string
   options: string[]
