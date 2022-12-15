@@ -24,23 +24,26 @@ export function Form() {
 
   return (
     <S.Container>
-      <Select
-        text="Tipo de transação"
-        htmlFor="type"
-        options={['Compra', 'Venda']}
-        onChange={(e) => setType(e.target.value)}
-      />
-      <Input
-        text="Nome da mercadoria"
-        htmlFor="name"
-        onChange={(e) => setName(e.target.value)}
-      />
-      <Input
-        type="number"
-        text="Valor"
-        htmlFor="value"
-        onChange={(e) => setValue(e.target.value)}
-      />
+      <h3>Nova transação</h3>
+      <S.InputsContainer>
+        <Select
+          text="Tipo de transação"
+          htmlFor="type"
+          options={['Compra', 'Venda']}
+          onChange={(e) => setType(e.target.value)}
+        />
+        <Input
+          text="Nome da mercadoria"
+          htmlFor="name"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <Input
+          type="number"
+          text="Valor"
+          htmlFor="value"
+          onChange={(e) => setValue(e.target.value)}
+        />
+      </S.InputsContainer>
 
       <button type="button" onClick={handleAddExpense}>
         Adicionar transação

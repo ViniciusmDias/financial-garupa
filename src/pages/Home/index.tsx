@@ -7,9 +7,11 @@ export function Home() {
   return (
     <S.Container>
       <Header />
-      <Form />
-      <h3>Extrato de transações</h3>
-      <Table />
+      <S.Content>
+        <Form />
+        <Table />
+      </S.Content>
+      <S.Footer />
     </S.Container>
   )
 }

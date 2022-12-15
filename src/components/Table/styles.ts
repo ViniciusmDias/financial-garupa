@@ -1,12 +1,26 @@
 import styled from 'styled-components'
 
-export const Container = styled.table`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: 1rem 1.25rem;
-  background-color: var(--blue);
-  border-bottom: 0.5rem solid ${(props) => props.theme['gray-100']};
+  padding: 0 1.25rem;
+  width: 100%;
+
+  h3 {
+    text-align: center;
+    margin-top: 0.25rem;
+    padding-top: 1.25rem;
+  }
+
+  @media (min-width: 1112px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+`
+
+export const Content = styled.table`
+  display: flex;
+  flex-direction: column;
 `
 
 export const ListHeader = styled.thead`
@@ -37,7 +51,7 @@ export const Row = styled.tr`
   }
   td:last-child {
     margin-left: auto;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
   }
 
   td {
@@ -61,7 +75,11 @@ export const ListBody = styled.tbody`
   margin-bottom: 0.125rem;
   overflow: auto;
   max-height: 21vh;
-  flex: 1;
+
+  @media (min-width: 768px) {
+    height: auto;
+    max-height: 40vh;
+  }
 `
 
 export const ListFooter = styled.tfoot`

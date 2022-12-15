@@ -44,38 +44,39 @@ export function Table() {
 
   return (
     <S.Container>
-      <S.ListHeader>
-        <S.Row>
-          <th></th>
-          <th>Mercadoria</th>
-          <th>Valor</th>
-        </S.Row>
-      </S.ListHeader>
-      <S.ListBody>
-        {loading ? (
-          <p>Carregando...</p>
-        ) : (
-          allTransactions.map((transaction) => {
-            return (
-              <S.Row key={transaction.id}>
-                <td>{transformType(transaction.type)}</td>
-                <td>{transaction.name}</td>
-                <td>R$ {Number(transaction.value).toFixed(2)}</td>
-              </S.Row>
-            )
-          })
+      <h3>Extrato de transações</h3>
+      <S.Content>
+        <S.ListHeader>
+          <S.Row>
+            <th></th>
+            <th>Mercadoria</th>
+            <th>Valor</th>
+          </S.Row>
+        </S.ListHeader>
+        {!loading && (
+          <S.ListBody>
+            {allTransactions.map((transaction) => {
+              return (
+                <S.Row key={transaction.id}>
+                  <td>{transformType(transaction.type)}</td>
+                  <td>{transaction.name}</td>
+                  <td>R$ {Number(transaction.value).toFixed(2)}</td>
+                </S.Row>
+              )
+            })}
+          </S.ListBody>
         )}
-      </S.ListBody>
-      <S.ListFooter>
-        <S.Row>
-          <td></td>
-          <td>Total</td>
-          <td>
-            R$ {totalValueTransactions.toFixed(2)}
-            <span>{profit}</span>
-          </td>
-        </S.Row>
-      </S.ListFooter>
+        <S.ListFooter>
+          <S.Row>
+            <td></td>
+            <td>Total</td>
+            <td>
+              R$ {totalValueTransactions.toFixed(2)}
+              <span>{profit}</span>
+            </td>
+          </S.Row>
+        </S.ListFooter>
+      </S.Content>
     </S.Container>
   )
 }

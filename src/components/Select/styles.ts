@@ -12,7 +12,7 @@ export const Label = styled.label`
     border: 1px solid ${(props) => props.theme['gray-900']};
     border-radius: 0.25rem;
     background-color: transparent;
-    padding: 0.5rem 0.75rem;
+    padding: 0.65rem 0.75rem;
     margin-bottom: 1.25rem;
   }
 `
