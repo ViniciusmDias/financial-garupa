@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { Transaction } from '../../@types'
+import { Transaction, Wallet } from '../../@types'
 
 const INITIAL_STATE = {
   transactions: [] as Transaction[],
@@ -32,6 +32,8 @@ export const transactionSlice = createSlice({
     },
   },
 })
+
+export const getTransactions = (state: Wallet) => state.wallet.transactions
 
 export const { fetchTransactions, addTransaction } = transactionSlice.actions
 

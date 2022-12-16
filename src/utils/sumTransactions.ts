@@ -1,7 +1,7 @@
 import { Transaction } from '../@types'
 
 export function sumTransactions(transactions: Transaction[]) {
-  if (transactions.length === 0) return 0
+  if (transactions?.length === 0 || transactions?.length === undefined) return 0
 
   const newtransactionValues = transactions.map((transaction) => {
     if (transaction.type === 'Venda') {

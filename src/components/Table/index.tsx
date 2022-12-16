@@ -9,22 +9,17 @@ import * as S from './styles'
 
 export function Table() {
   const [loading, setLoading] = useState(true)
+  const { transactions } = useSelector((state: Wallet) => state.wallet || [])
 
   const dispatch = useDispatch()
 
-  const allTransactions = useSelector(
-    (state: Wallet) => state.wallet.transactions,
-  )
+  const totalValueTransactions = useMemo(() => {
+    return sumTransactions(transactions)
+  }, [transactions])
 
-  const totalValueTransactions = useMemo(
-    () => sumTransactions(allTransactions),
-    [allTransactions],
-  )
-
-  const profit = useMemo(
-    () => transformProfit(totalValueTransactions),
-    [totalValueTransactions],
-  )
+  const profit = useMemo(() => {
+    return transformProfit(totalValueTransactions)
+  }, [totalValueTransactions])
 
   const setTableInfo = useCallback(() => {
     setLoading(true)
@@ -55,7 +50,7 @@ export function Table() {
         </S.ListHeader>
         {!loading && (
           <S.ListBody>
-            {allTransactions.map((transaction) => {
+            {transactions?.map((transaction) => {
               return (
                 <S.Row key={transaction.id}>
                   <td>{transformType(transaction.type)}</td>
@@ -71,7 +66,10 @@ export function Table() {
             <td></td>
             <td>Total</td>
             <td>
-              R$ {totalValueTransactions.toFixed(2)}
+              {totalValueTransactions
+                ? `R$ ${totalValueTransactions?.toFixed(2)}
+                `
+                : `R$ ${0}`}
               <span>{profit}</span>
             </td>
           </S.Row>
