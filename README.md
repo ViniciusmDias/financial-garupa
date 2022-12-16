@@ -10,7 +10,7 @@
 
 ## Descrição
 
-Desenvolvimente de uma aplicação de controle de custos financeiros utilizando React, com Typescript e Redux Toolkit.
+Desenvolvimento de uma aplicação de controle de custos financeiros utilizando React, com Typescript e Redux Toolkit.
 
 ## Orientações para rodar o projeto localmente
 
@@ -29,14 +29,14 @@ Após clonar e acessar o repositório, instale as dependências e inicialize o p
 
 </details>
 
-## Técnologias utilizadas
+## Tecnologias utilizadas
 
 Resumo das tecnologias e a necessidade do uso.
 
 - React;
 - Typescript: Para um melhor debug do código;
 - [Vite](https://vitejs.dev/): Para criação de projetos react;
-- [styled-components](https://styled-components.com/) Styled Components: Para estilização de componentes, estilo global e criação de themas;
+- [styled-components](https://styled-components.com/) Styled Components: Para estilização de componentes, estilo global e criação de temas;
 - [ReduxToolkit](https://redux-toolkit.js.org/): Para controle do estado no frontend;
 - [Vitest](https://vitejs.dev/) e [Testing library](https://vitejs.dev/) : Para testes unitários
 
